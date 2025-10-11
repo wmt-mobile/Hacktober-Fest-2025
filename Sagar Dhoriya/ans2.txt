@@ -1,0 +1,67 @@
+
+=> How React Tracks Multiple useState and useEffect Calls
+
+React uses a list-based internal mechanism called hooks list to track the state and effects for each component. The key idea is that the order of hooks matters.
+
+ 1\. The Hooks List (Fiber Hooks)
+
+   When a component is rendered, React creates a linked list (or array internally) of hooks for that component.
+   Each hook (like useState or useEffect) corresponds to a node in this list.
+   React does not track hooks by variable names, but by the order in which hooks are called.
+
+  
+
+ 2\. How useState Works Internally
+
+   Each call to useState(initialValue):
+    
+    1.  Checks the current hook node in the list.
+    2.  If it’s the first render, it creates a new hook node with the initial state.
+    3.  On subsequent renders, it retrieves the current state from that node.
+    4.  Returns [state, setState].
+   React keeps an internal pointer (hookIndex) that increments each time a hook is used, ensuring each call matches the correct hook node.
+    
+
+  
+
+ 3\. How useEffect Works Internally
+
+   Each useEffect(effect, deps) call is also tracked in the hooks list in order.
+    
+   React stores:
+    
+       The effect callback function.
+       The dependency array.
+       A cleanup function if returned by the previous effect.
+   On re-render:
+    
+       React compares the current dependencies with the previous ones stored in the hook node.
+       If dependencies have changed, it schedules the effect to run after the render.
+
+  
+
+ 4\. Why Order Matters
+
+   Hooks must be called in the same order on every render.
+   If you call a hook conditionally or in a loop, React’s internal hook pointer will get out of sync.
+   This can lead to wrong state being read or effects not being run correctly.
+
+    // Correct
+    function MyComponent({ flag }) {
+      const [count, setCount] = useState(0); // 1st hook
+      const [name, setName] = useState("");   // 2nd hook
+    
+      useEffect(() => {
+        console.log(count);
+      }, [count]);                            // 3rd hook
+    
+      return <div>{count}</div>;
+    }
+    
+    // Incorrect: conditional hooks
+    function MyComponent({ flag }) {
+      const [count, setCount] = useState(0);
+      if (flag) {
+        useEffect(() => { console.log(count); }, [count]); // ❌ conditional hook
+      }
+    }

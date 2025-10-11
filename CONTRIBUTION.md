@@ -12,7 +12,7 @@ Hacktoberfest "https://hacktoberfest.com/" is a month-long celebration in open s
 ## Let's Start
 ------------
 
-1. Look for the issues which fits you and ask maintainers to assigned to you.
+1. Look for the i   ssues which fits you and ask maintainers to assigned to you.
 2. Fork this repository.
 3. Clone repo to your local development machine
         git clone "https://github.com/wmt-mobile/Hacktober-Fest-2025"
