@@ -15,3 +15,8 @@ To contribute:
 | <!--                                                   | [YOUR NAME](https://github.com/your-profile) | Your City, Country   | Short bio or introduction                                                                                                                  | List the languages you know or are learning | Your email (optional) | --> |
 
 <!--^^^^^ Write your information here without blank spacing ^^^^ -->
+Name: [Syed Uzaif](https://github.com/syeduzaif)  
+Place: Karachi  
+About: im flutter developer  
+Programming Languages: dart  
+Email: syeduzaifamin@gamil.com  

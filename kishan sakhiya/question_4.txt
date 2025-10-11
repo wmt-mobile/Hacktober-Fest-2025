@@ -1,0 +1,118 @@
+OOP Concepts with Theory and Examples (Detailed)
+
+1. Encapsulation
+
+Theory: Encapsulation is the practice of wrapping the data (variables) and methods (functions) into a single unit, i.e., a class. By making variables private and providing public methods (getters and setters), encapsulation protects data from unintended access and modification, ensures data integrity, and allows controlled access.
+
+Example (Dart):
+
+class BankAccount {
+double _balance = 0; // private variable, not accessible directly
+
+void deposit(double amount) {
+if(amount > 0) _balance += amount;
+}
+
+void withdraw(double amount) {
+if(amount <= _balance) _balance -= amount;
+}
+
+double get balance => _balance; // public getter
+}
+
+void main() {
+var account = BankAccount();
+account.deposit(500);
+account.withdraw(200);
+print(account.balance); // 300
+}
+
+Here, the internal balance cannot be changed directly; only deposit and withdraw methods control it.
+
+2. Abstraction
+
+Theory: Abstraction hides complex details and shows only the essential features to the user. It allows focusing on what an object does, rather than how it does it. Achieved using abstract classes or interfaces.
+
+Example (Dart):
+
+abstract class Shape {
+void draw(); // abstract method: we only define WHAT it should do
+}
+
+class Circle extends Shape {
+void draw() => print('Drawing Circle'); // actual implementation
+}
+
+class Square extends Shape {
+void draw() => print('Drawing Square');
+}
+
+void main() {
+List<Shape> shapes = [Circle(), Square()];
+for(var shape in shapes) shape.draw();
+// Output: Drawing Circle
+//         Drawing Square
+}
+
+Users interact with Shape without worrying about how each shape is drawn.
+
+3. Inheritance
+
+Theory: Inheritance allows a class (child/subclass) to reuse properties and methods of another class (parent/superclass). It represents an "is-a" relationship and promotes code reuse and organization.
+
+Example (Dart):
+
+class Vehicle {
+void start() => print('Vehicle started');
+}
+
+class Car extends Vehicle {
+void honk() => print('Car honks');
+}
+
+class Bike extends Vehicle {
+void ringBell() => print('Bike bell rings');
+}
+
+void main() {
+var car = Car();
+car.start(); // Vehicle started
+car.honk();  // Car honks
+
+var bike = Bike();
+bike.start();    // Vehicle started
+bike.ringBell(); // Bike bell rings
+}
+
+Car and Bike inherit the start method from Vehicle, so code does not repeat.
+
+4. Polymorphism
+
+Theory: Polymorphism means many forms, allowing objects to behave differently using the same interface. It supports flexibility and dynamic behavior. Two types: Compile-time (method overloading) and Run-time (method overriding).
+
+Example (Dart):
+
+class Animal {
+void sound() => print('Some sound');
+}
+
+class Dog extends Animal {
+@override
+void sound() => print('Bark');
+}
+
+class Cat extends Animal {
+@override
+void sound() => print('Meow');
+}
+
+void main() {
+List<Animal> animals = [Dog(), Cat()];
+for(var animal in animals) animal.sound();
+// Output: Bark
+//         Meow
+}
+
+The same method sound() behaves differently depending on the object type.
+
+This detailed explanation covers how each OOP concept works, its purpose, and practical small examples in Dart.
