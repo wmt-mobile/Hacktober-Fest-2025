@@ -20,7 +20,7 @@ Get real-world experience with Git, GitHub, and open-source collaboration.
 Connect with developers, designers, and innovators across the world.
 
 **🏅 Swag:**
-Complete **4 pull requests (PRs)** and earn exclusive **Holopin badges** 🪶 and other digital rewards to celebrate your open-source journey!
+Complete **6 pull requests (PRs)** and earn exclusive **Holopin badges** 🪶 and other digital rewards to celebrate your open-source journey!
 
 **🌍 Impact:**
 Your contributions help strengthen projects used by developers everywhere. Every PR counts toward making open source better for everyone!
@@ -45,7 +45,7 @@ git checkout -b issue/branch-name
 
 5️⃣ **Resolve your issue** and submit each question or task in a **separate folder**.
 6️⃣ **Open a Pull Request (PR)** for each submission so they can be reviewed individually.
-7️⃣ Once your PRs are merged, **add your details** to the `CONTRIBUTORS.md` file:
+7️⃣ Once your PRs are merged, **add your details** to the CONTRIBUTORS.md file:
 
 ```
 Name: [YOUR NAME](GitHub Profile Link)  
