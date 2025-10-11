@@ -1,104 +1,63 @@
-# Questions
+# Hacktoberfest 2025 Contributions - Aman Vaghela
+
+This repository contains answers to 6 technical questions, organized in separate folders as per Hacktoberfest contribution guidelines.
+
+## 📚 Questions & Solutions
+
+### Question 1: Laravel N+1 Query Problem
+**Topic:** Laravel Eloquent Optimization  
+**Folder:** [Question-1-N+1-Query-Problem](./Question-1-N+1-Query-Problem/)  
+**Description:** Advanced techniques to prevent N+1 query problems in Eloquent relationships beyond just `with()`.
+
+### Question 2: Laravel Queue Drivers Comparison
+**Topic:** Laravel Queue Systems  
+**Folder:** [Question-2-Laravel-Queue-Drivers](./Question-2-Laravel-Queue-Drivers/)  
+**Description:** Comprehensive comparison of `sync`, `database`, `Redis`, and `Beanstalkd` queue drivers in Laravel.
+
+### Question 3: Queue Worker Retry Handling
+**Topic:** Laravel Queue Management  
+**Folder:** [Question-3-Queue-Worker-Retry-Handling](./Question-3-Queue-Worker-Retry-Handling/)  
+**Description:** How queue worker retry handling works and what happens if a job keeps failing.
+
+### Question 4: Reverse Linked List
+**Topic:** Data Structures - Linked Lists  
+**Folder:** [Question-4-Reverse-Linked-List](./Question-4-Reverse-Linked-List/)  
+**Description:** Multiple approaches (iterative, recursive, stack-based) to reverse a singly linked list.
+
+### Question 5: Course Schedule Problem
+**Topic:** Graph Algorithms - Topological Sort  
+**Folder:** [Question-5-Course-Schedule-Problem](./Question-5-Course-Schedule-Problem/)  
+**Description:** Detect cycles in directed graphs using DFS and BFS (Kahn's Algorithm) to solve the course prerequisite problem.
+
+### Question 6: Minimum Size Subarray Sum
+**Topic:** Algorithms - Sliding Window  
+**Folder:** [Question-6-Minimum-Size-Subarray-Sum](./Question-6-Minimum-Size-Subarray-Sum/)  
+**Description:** Find the minimal length of a subarray whose sum is greater than or equal to target using the sliding window technique.
 
 ---
 
-## 1. How do you prevent the N+1 query problem in Eloquent relationships beyond just `with()`?
+## 🎯 Topics Covered
+
+- **Backend Development:** Laravel Eloquent, Queue Systems
+- **Data Structures:** Linked Lists
+- **Algorithms:** Graph Algorithms, Sliding Window, Topological Sort
+- **Programming Languages:** PHP, Python, JavaScript, TypeScript, C++
+
+## 📝 Note
+
+Each question is answered with:
+- ✅ Detailed explanations
+- ✅ Multiple implementation approaches
+- ✅ Code examples in multiple languages
+- ✅ Time and space complexity analysis
+- ✅ Visual explanations and step-by-step walkthroughs
+- ✅ Best practices and recommendations
 
 ---
 
-## 2. What are the differences between `sync`, `database`, `Redis`, and `Beanstalkd` queue drivers in Laravel?
+**Contributor:** Aman Vaghela  
+**Event:** Hacktoberfest 2025  
+**Organization:** WebMob Technologies
 
----
+Made with ❤️ for Open Source
 
-## 3. How does queue worker retry handling work?  
-What happens if a job keeps failing?
-
----
-
-## 4. Write a logic for reversing a linked list.
-
----
-
-## 5. Course Schedule Problem
-
-There are a total of `numCourses` courses you have to take, labeled from `0` to `numCourses - 1`.  
-
-You are given an array `prerequisites` where `prerequisites[i] = [ai, bi]` indicates that you must take course `bi` first if you want to take course `ai`.  
-
-For example, the pair `[0, 1]` indicates that to take course `0` you have to first take course `1`.  
-
-Return `true` if you can finish all courses. Otherwise, return `false`.
-
-### Example 1
-
-**Input:**  
-numCourses = 2, prerequisites = [[1,0]]
-
-
-**Output:**  
-true
-
-
-**Explanation:**  
-There are a total of 2 courses to take.  
-To take course 1 you should have finished course 0. So it is possible.
-
----
-
-### Example 2
-
-**Input:**  
-numCourses = 2, prerequisites = [[1,0],[0,1]]
-
-
-**Output:**  
-false
-
-
-**Explanation:**  
-There are a total of 2 courses to take.  
-To take course 1 you should have finished course 0, and to take course 0 you should also have finished course 1. So it is impossible.
-
----
-
-## 6. Minimum Size Subarray Sum
-
-Given an array of positive integers `nums` and a positive integer `target`, return the minimal length of a subarray whose sum is greater than or equal to `target`.  
-
-If there is no such subarray, return `0` instead.
-
-### Example 1
-
-**Input:**  
-target = 7, nums = [2,3,1,2,4,3]
-
-
-**Output:**  
-2
-
-
-**Explanation:**  
-The subarray `[4,3]` has the minimal length under the problem constraint.
-
----
-
-### Example 2
-
-**Input:**  
-target = 4, nums = [1,4,4]
-
-
-**Output:**  
-1
-
-
----
-
-### Example 3
-
-**Input:**  
-target = 11, nums = [1,1,1,1,1,1,1,1]
-
-
-**Output:**  
-0
