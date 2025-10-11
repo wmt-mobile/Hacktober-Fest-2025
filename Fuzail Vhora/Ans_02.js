@@ -42,3 +42,5 @@
 
 // In short:
 // startTransition helps React schedule updates smartly — urgent tasks first, non-urgent ones later — ensuring a smooth, responsive UI.
+
+// answer two updated
